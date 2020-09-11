@@ -1,0 +1,2 @@
+# estad-stica
+ojalá aprueba
