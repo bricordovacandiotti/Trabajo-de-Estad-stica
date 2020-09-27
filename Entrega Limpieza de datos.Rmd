@@ -245,6 +245,7 @@ total2= total2[-82,]
 idh[idh$Pais=="Congo(Democratic Republic of the)","Pais"]="Democratic Republic of the Congo"
 idh[idh$Pais=="Bolivia (Plurinational State of)","Pais"]="Bolivia"
 idh[idh$Pais=="Eswatini (Kingdom of)","Pais"]="Eswatini"
+idh[idh$Pais=="Côte d'Ivoire","Pais"]="Cote d'Ivoire"
 idh[idh$Pais=="Czechia","Pais"]="Czech Republic"
 idh[idh$Pais=="Guinea-Bissau","Pais"]="	Guinea Bissau"
 idh[idh$Pais=="Iran (Islamic Republic of)","Pais"]="Iran"
