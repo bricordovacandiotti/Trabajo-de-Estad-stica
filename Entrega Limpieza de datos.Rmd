@@ -17,7 +17,7 @@ When you save the notebook, an HTML file containing the code and output will be 
 
 The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
 
-limpieza IDH:
+#limpieza IDH:
 
 
 Librerías a utilizar: 
@@ -102,7 +102,7 @@ idh$num1=NULL
 
 
 
-limpieza RULE OF LAW
+#limpieza RULE OF LAW
 
 Traigo la data:
 ```{r}
@@ -141,7 +141,8 @@ rule$`Rule of law`=as.numeric(rule$`Rule of law`)
 ```
 
 
-Hago merge:
+#VARIABLE IPC
+Variable dependiente
 
 Pero primero, traigo la tabla del IPC
 
@@ -225,9 +226,9 @@ ICP$num=NULL #luego la elimino nuevamente
 ```
 
 
-¡CASI LISTO!
+#¡CASI LISTO!
 
-Ahora el merge:
+#Ahora el merge:
 
 ```{r}
 total1=merge(ICP,idh,by.x='Pais', by.y='Pais')
@@ -241,6 +242,7 @@ total2[!complete.cases(total2),]
 ```
 
 
+Estandarizo los nombres para que el merge se realice correctamente:
 ```{r}
 idh[idh$Pais=="Congo(Democratic Republic of the)","Pais"]="Democratic Republic of the Congo"
 idh[idh$Pais=="Bolivia (Plurinational State of)","Pais"]="Bolivia"
@@ -273,6 +275,8 @@ Reviso NA
 total3[duplicated(total3$Pais),]
 total3[!complete.cases(total3),]
 ```
+
+Estandarizo los nombres para que el merge se realice correctamente:
 ```{r}
 rule[rule$Pais=="Bahamas, The","Pais"]="Bahamas"
 rule[rule$Pais=="Congo, Dem. Rep.","Pais"]="Democratic Republic of the Congo"
