@@ -34,6 +34,15 @@ lkCSV="https://github.com/bricordovacandiotti/estad-stica/raw/master/Human%20dev
 idh=import(lkCSV)
 ```
 
+
+Elimino columnas que no utilizaré: 
+```{r}
+idh [,c(2:27)] = NULL 
+idh [,c(3,4)] = NULL
+```
+
+
+
 cambio de nombre:
 ```{r}
 names(idh)
@@ -43,13 +52,6 @@ summary(idh)
 
 
 ```
-
-Elimino columnas que no utilizaré: 
-```{r}
-idh [,c(2:27)] = NULL 
-idh [,c(3,4)] = NULL
-```
-
 
 Hago split:Esto con el objetivo de separar.
 ```{r}
